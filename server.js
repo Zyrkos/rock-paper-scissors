@@ -1,6 +1,10 @@
-function random_items(items) {
-    return items[Math.floor(Math.random()*items.lenght)];
-}
+const choices = ['Rock', 'Paper', 'Scissors'];
 
-var items = [254, 45,212];
-console.log(random_items(items));
+function computerPlay() {
+    return choices[Math.floor(Math.random()*3)];
+
+}
+//This function randomly selects an item from the "choices" array
+
+
+console.log(computerPlay(choices));
