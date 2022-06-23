@@ -52,13 +52,17 @@ const playRound = (playerSelection, computerSelection) => {
 
 }
 
-const playerSelection = 'rock';
+
 
 
 const game = () => {
 for (let i = 0; i < 5; i++) {
-    const computerSelection = computerPlay(); // We put this inside the loop, otherwise it would output the same (computer) value for the 5 rounds.
-    playRound(playerSelection, computerSelection)                                         
+    const computerSelection = computerPlay();
+    // We put this inside the loop, otherwise it would output the same (computer) value for the 5 rounds.
+    const playerSelection = prompt('Choose your weapon')
+    playRound(playerSelection, computerSelection)  
+    
+    console.log ('1', playRound(playerSelection, computerSelection))
 }
 
 if (playerScore > computerScore) {
