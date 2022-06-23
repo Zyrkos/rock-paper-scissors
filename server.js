@@ -4,7 +4,7 @@
 
 
 function computerPlay() {
-    const choice = ["Rock", "Paper", "Scissors"]; //array
+    const choice = ["rock", "paper", "scissors"]; //array
     const randomChoice = Math.floor(Math.random()*3);
     //This function makes the computer randomly select an item from a given array. 
     //In this case, we create an array with the options rock, paper and scissors, and then use
