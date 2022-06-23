@@ -27,17 +27,23 @@ const playRound = (playerSelection, computerSelection) => {
     return 'It\'s a tie, you have both selected scissors!'
     //ties above
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        playerScore++ //this adds to the player score
         return 'You win! Rock beats scissors.'
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        playerScore++
         return 'You win! Paper beats rock.'
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        playerScore++
         return 'You win! Scissors beats paper.'
     //player wins above  
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        computerScore++ //this adds to the computer score
         return 'You lost! Paper beats rock.'
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        computerScore++
         return 'You lost! Scissors beats paper.'
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        computerScore++
         return 'You lost! Rock beats scissors.'
     }
     //computer wins above
@@ -47,11 +53,12 @@ const playRound = (playerSelection, computerSelection) => {
 }
 
 const playerSelection = 'rock';
-const computerSelection = computerPlay();
 
 
 const game = () => {
 for (let i = 0; i < 5; i++) {
+    const computerSelection = computerPlay(); // We put this inside the loop, otherwise it would output the same (computer) value for the 5 rounds.
+                                              
     console.log(playRound(playerSelection, computerSelection));
 }
 
