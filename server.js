@@ -58,13 +58,19 @@ const playerSelection = 'rock';
 const game = () => {
 for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay(); // We put this inside the loop, otherwise it would output the same (computer) value for the 5 rounds.
-                                              
-    console.log(playRound(playerSelection, computerSelection));
+    playRound(playerSelection, computerSelection)                                         
 }
 
+if (playerScore > computerScore) {
+    return 'You\'ve won!'
+} else if (playerScore > computerScore) {
+    return 'You\'ve lost!'
+} else {
+    return 'It\s a draw!'
+}
 }
 
-game();
+console.log(game());
 
 
 
