@@ -16,6 +16,35 @@ function computerPlay() {
 
 console.log(computerPlay());
 
+const playRound = (playerSelection, computerSelection) => {
+    //In this function, we're going to introduce all the possibilities for the match
+    if (playerSelection === 'rock' && computerSelection === 'rock') {
+        return 'It\'s a tie, you have both selected rock!'
+    } else  if (playerSelection === 'paper' && computerSelection === 'paper') {
+        return 'It\'s a tie, you have both selected paper!'
+    } else  if (playerSelection === 'scissors' && computerSelection === 'scissors') {
+    return 'It\'s a tie, you have both selected scissors!'
+    //ties above
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        return 'You win! Rock beats scissors.'
+    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        return 'You win! Paper beats rock.'
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        return 'You win! Scissors beats paper.'
+    //player wins    
+    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        return 'You lost! Paper beats rock.'
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        return 'You lost! Scissors beats paper.'
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        return 'You lost! Rock beats scissors.'
+    }
+    //computer wins
+
+
+
+}
+
 
 
 
