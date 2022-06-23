@@ -1,10 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
 
-
-
-
-
 function computerPlay() {
     const choice = ["rock", "paper", "scissors"]; //array
     const randomChoice = Math.floor(Math.random()*3);
@@ -16,7 +12,6 @@ function computerPlay() {
     return computerChoice;
 }
 
-
 const playRound = (playerSelection, computerSelection) => {
     //In this function, we're going to introduce all the possibilities for the match
     if (playerSelection === 'rock' && computerSelection === 'rock') {
@@ -25,6 +20,11 @@ const playRound = (playerSelection, computerSelection) => {
         return 'It\'s a tie, you have both selected paper!'
     } else  if (playerSelection === 'scissors' && computerSelection === 'scissors') {
     return 'It\'s a tie, you have both selected scissors!'
+    //you could also reduce this to:
+    // if(playerSelection === computerSelection) {
+    //    return `It's a tie! You both picked ${playerSelection}` 
+    // }
+    
     //ties above
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         playerScore++ //this adds to the player score
@@ -47,13 +47,7 @@ const playRound = (playerSelection, computerSelection) => {
         return 'You lost! Rock beats scissors.'
     }
     //computer wins above
-
-
-
 }
-
-
-
 
 const game = () => {
 for (let i = 0; i < 5; i++) {
@@ -61,7 +55,6 @@ for (let i = 0; i < 5; i++) {
     // We put this inside the loop, otherwise it would output the same (computer) value for the 5 rounds.
     const playerSelection = prompt('Choose your weapon').toLowerCase();
     playRound(playerSelection, computerSelection)  
-    
     console.log ('1', playRound(playerSelection, computerSelection))
 }
 
