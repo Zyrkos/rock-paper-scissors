@@ -59,7 +59,7 @@ const game = () => {
 for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay();
     // We put this inside the loop, otherwise it would output the same (computer) value for the 5 rounds.
-    const playerSelection = prompt('Choose your weapon')
+    const playerSelection = prompt('Choose your weapon').toLowerCase();
     playRound(playerSelection, computerSelection)  
     
     console.log ('1', playRound(playerSelection, computerSelection))
