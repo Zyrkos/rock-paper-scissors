@@ -1,3 +1,5 @@
+let playerScore = 0;
+let computerScore = 0;
 
 
 
@@ -46,8 +48,16 @@ const playRound = (playerSelection, computerSelection) => {
 
 const playerSelection = 'rock';
 const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
 
+
+const game = () => {
+for (let i = 0; i < 5; i++) {
+    console.log(playRound(playerSelection, computerSelection));
+}
+
+}
+
+game();
 
 
 
