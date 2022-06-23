@@ -1,40 +1,26 @@
-const choices = ["Rock", "Paper", "Scissors"];
 
 
 
-function playerChoice () {
-    let input = prompt("Type Rock, Paper, or Scissors");
-    while (input == null) {
-        input = prompt("Type Rock, Paper, or Scissors");
-    }
-    input = input.toLowerCase();
-    let check = validateInput(input);           
-    while (check == false) {
-        input = prompt(
-            "Type Rock, Paper, or Scissors. Spelling needs to be exact. Capitalization doesn't matter"
-        );
-        while (input == null) {
-            input = prompt("Type Rock, Paper, or Scissors");
-        }
-        input = input.toLowerCase();
-        check = validateInput(input);
-    }
-    return input;
+
+
+function computerPlay() {
+    const choice = ["Rock", "Paper", "Scissors"];
+    const randomChoice = Math.floor(Math.random()*3);
+    //This function makes the computer randomly select an item from a given array. 
+    //In this case, we create an array with the options rock, paper and scissors, and then use
+    //Math.random(*3, since that is the number of items in the array), which gets any number
+    //between 0 and 1 (but never 1), Math.floor then approximates it.
+    console.log(choice[randomChoice])
 }
 
-function computerChoice() {
-    return choices[Math.floor(Math.random()*3)];
-}
+computerPlay();
 
 
 
-function validateInput(choice) {
-    return choices.includes(choice);
-}
 
 
 
-let input = playerChoice();
+
 
 
 
