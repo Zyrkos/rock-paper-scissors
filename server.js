@@ -14,7 +14,6 @@ function computerPlay() {
     return computerChoice;
 }
 
-console.log(computerPlay());
 
 const playRound = (playerSelection, computerSelection) => {
     //In this function, we're going to introduce all the possibilities for the match
@@ -31,7 +30,7 @@ const playRound = (playerSelection, computerSelection) => {
         return 'You win! Paper beats rock.'
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         return 'You win! Scissors beats paper.'
-    //player wins    
+    //player wins above  
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
         return 'You lost! Paper beats rock.'
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
@@ -39,11 +38,15 @@ const playRound = (playerSelection, computerSelection) => {
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         return 'You lost! Rock beats scissors.'
     }
-    //computer wins
+    //computer wins above
 
 
 
 }
+
+const playerSelection = 'rock';
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection));
 
 
 
