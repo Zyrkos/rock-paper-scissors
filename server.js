@@ -5,7 +5,6 @@ const rockButton = document.querySelector('.rock');
 const paperButton = document.querySelector('.paper');
 const scissorsButton = document.querySelector('.scissors');
 
-rockButton.addEventListener('click',playerSelection);
 
 
 
@@ -47,6 +46,14 @@ const playRound = (playerSelection, computerSelection) => {
     }
 }
 
+rockButton.addEventListener('click', () => {
+    const computerSelection = computerPlay();
+    const playerSelection = 'rock';
+    
+} 
+)
+
+
 /*   const game = () => {
 for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay();
@@ -63,8 +70,8 @@ if (playerScore > computerScore) {
 }
 } */
 
-console.log(game());
-
+/* console.log(game());
+ */
 
 
 
