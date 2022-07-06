@@ -1,7 +1,11 @@
 let playerScore = 0;
 let computerScore = 0;
 
-document.getElementById('rock').onclick = user;
+const rockButton = document.querySelector('.rock');
+const paperButton = document.querySelector('.paper');
+const scissorsButton = document.querySelector('.scissors');
+
+rockButton.addEventListener('click',playerSelection);
 
 
 
@@ -43,12 +47,12 @@ const playRound = (playerSelection, computerSelection) => {
     }
 }
 
-  const game = () => {
-/* for (let i = 0; i < 5; i++) {
+/*   const game = () => {
+for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay();
     const playerSelection = prompt('Choose your weapon').toLowerCase();
     playRound(playerSelection, computerSelection)  
-} */
+}
 
 if (playerScore > computerScore) {
     return 'You\'ve won!'
@@ -57,7 +61,7 @@ if (playerScore > computerScore) {
 } else {
     return 'It\s a draw!'
 }
-}
+} */
 
 console.log(game());
 
