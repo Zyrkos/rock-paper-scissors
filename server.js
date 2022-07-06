@@ -7,10 +7,6 @@ const scissorsButton = document.querySelector('.scissors');
 const resultDiv = document.querySelector('.result');
 
 
-
-
-
-
 function computerPlay() {
     const choice = ["rock", "paper", "scissors"]; 
     const randomChoice = Math.floor(Math.random()*3);
