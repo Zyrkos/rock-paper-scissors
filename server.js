@@ -21,43 +21,64 @@ function computerPlay() {
 const playRound = (playerSelection, computerSelection) => {
     if (playerSelection === 'rock' && computerSelection === 'rock') {
         const p = document.createElement('p');
-        p.innerText = 'It\'s a tie, you have both selected rock!'
+        p.innerText = 'It\'s a tie, you have both selected rock!';
+        resultDiv.append(p);
     } else  if (playerSelection === 'paper' && computerSelection === 'paper') {
         const p = document.createElement('p');
-        p.innerText = 'It\'s a tie, you have both selected paper!'
+        p.innerText = 'It\'s a tie, you have both selected paper!';
+        resultDiv.append(p);
     } else  if (playerSelection === 'scissors' && computerSelection === 'scissors') {
         const p = document.createElement('p');
-        p.innerText = 'It\'s a tie, you have both selected scissors!'
+        p.innerText = 'It\'s a tie, you have both selected scissors!';
+        resultDiv.append(p);
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        playerScore++
+        playerScore++;
         const p = document.createElement('p');
-        p.innerText = 'You win! Rock beats scissors.'
+        p.innerText = 'You win! Rock beats scissors.';
+        resultDiv.append(p);
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        playerScore++
+        playerScore++;
         const p = document.createElement('p');
-        p.innerText = 'You win! Paper beats rock.'
+        p.innerText = 'You win! Paper beats rock.';
+        resultDiv.append(p);
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        playerScore++
+        playerScore++;
         const p = document.createElement('p');
-        p.innerText = 'You win! Scissors beats paper.'
+        p.innerText = 'You win! Scissors beats paper.';
+        resultDiv.append(p);
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        computerScore++ 
+        computerScore++;
         const p = document.createElement('p');
-        p.innerText = 'You lost! Paper beats rock.'
+        p.innerText = 'You lost! Paper beats rock.';
+        resultDiv.append(p);
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        computerScore++
+        computerScore++;
         const p = document.createElement('p');
-        p.innerText = 'You lost! Scissors beats paper.'
+        p.innerText = 'You lost! Scissors beats paper.';
+        resultDiv.append(p);
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        computerScore++
+        computerScore++;
         const p = document.createElement('p');
-        p.innerText = 'You lost! Rock beats scissors.'
+        p.innerText = 'You lost! Rock beats scissors.';
+        resultDiv.append(p);
     }
 }
 
 rockButton.addEventListener('click', () => {
     const computerSelection = computerPlay();
     const playerSelection = 'rock';
+    playRound(playerSelection, computerSelection);
+})
+
+paperButton.addEventListener('click', () => {
+    const computerSelection = computerPlay();
+    const playerSelection = 'paper';
+    playRound(playerSelection, computerSelection);
+})
+
+scissorsButton.addEventListener('click', () => {
+    const computerSelection = computerPlay();
+    const playerSelection = 'scissors';
     playRound(playerSelection, computerSelection);
 })
 
