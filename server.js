@@ -80,8 +80,8 @@ const checkForWinner = (playerScore, computerScore) => {
 }
 
 const updateScore = (playerScore, computerScore) => {
-    playerScoreSpan.innerText = `${playerScore}`;
-    computerScoreSpan.innerText = `${computerScore}`;
+    playerScoreSpan.innerText = `Player score: ${playerScore}`;
+    computerScoreSpan.innerText = `Computer score: ${computerScore}`;
 }
 
 rockButton.addEventListener('click', () => {
@@ -109,24 +109,6 @@ scissorsButton.addEventListener('click', () => {
 })
 
 
-/*   const game = () => {
-for (let i = 0; i < 5; i++) {
-    const computerSelection = computerPlay();
-    const playerSelection = prompt('Choose your weapon').toLowerCase();
-    playRound(playerSelection, computerSelection)  
-}
-
-if (playerScore > computerScore) {
-    return 'You\'ve won!'
-} else if (playerScore > computerScore) {
-    return 'You\'ve lost!'
-} else {
-    return 'It\s a draw!'
-}
-} */
-
-/* console.log(game());
- */
 
 
 
