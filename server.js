@@ -60,22 +60,44 @@ const playRound = (playerSelection, computerSelection) => {
     }
 }
 
+const checkForWinner = (playerScore, computerScore) => {
+    if(playerScore === 5) {
+        const h2 = document.createElement('h2');
+        h2.classList.add('player-won');
+        h2.innerText = `You won ${playerScore} to ${computerScore}!`;
+        resultDiv.append(h2);
+
+    } else if(computerScore === 5) {
+        const h2 = document.createElement('h2');
+        h2.classList.add('computer-won');
+        h2.innerText = `You lost ${playerScore} to ${computerScore}!`;
+        resultDiv.append(h2);
+    }
+}
+
 rockButton.addEventListener('click', () => {
     const computerSelection = computerPlay();
     const playerSelection = 'rock';
     playRound(playerSelection, computerSelection);
+    checkForWinner(playerScore, computerScore);
 })
 
 paperButton.addEventListener('click', () => {
     const computerSelection = computerPlay();
     const playerSelection = 'paper';
     playRound(playerSelection, computerSelection);
+    checkForWinner(playerScore, computerScore);
+
+
 })
 
 scissorsButton.addEventListener('click', () => {
     const computerSelection = computerPlay();
     const playerSelection = 'scissors';
     playRound(playerSelection, computerSelection);
+    checkForWinner(playerScore, computerScore);
+
+
 })
 
 
