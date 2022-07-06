@@ -58,10 +58,8 @@ const playRound = (playerSelection, computerSelection) => {
 rockButton.addEventListener('click', () => {
     const computerSelection = computerPlay();
     const playerSelection = 'rock';
-
-    
-} 
-)
+    playRound(playerSelection, computerSelection);
+})
 
 
 /*   const game = () => {
